@@ -1,0 +1,86 @@
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background:linear-gradient(rgb(255, 60, 0), rgb(105, 29, 228));
+    text-align: center; 
+}
+
+body{
+    background-color: rgb(4, 4, 35);
+}
+
+.button {
+    padding: 10px;
+    width: calc(25% - 5px); 
+    background: #d9d9d9;
+    color: #0d0d0d;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    box-sizing: border-box; 
+}
+
+.button:hover{
+    background-color: #4f3d3d;
+    cursor: pointer;
+}
+
+.todolist {
+    max-width: 500px;
+    margin: 100px auto; 
+    padding: 0; 
+    list-style-type: none;
+    text-align: left;
+    overflow-y: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.input {
+    margin: 0;
+    border-radius: 10px;
+    width: calc(75% - 5px); 
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.error{
+    color: rgba(255, 30, 0, 0.967);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.todolist li {
+    cursor: pointer;
+}
+
+.check {
+    text-decoration: line-through;
+    background-color: #172117;
+    transition: 0.5s;
+    color: white;
+}
+
+.delete {
+    margin-right: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.delete:hover{
+    background-color: #540f0d;
+    transition: 0.2s;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, button {
+        padding: 6px; 
+    }
+}
