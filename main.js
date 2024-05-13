@@ -1,7 +1,6 @@
 function addItem() {
     var input = document.getElementById("input");
     var inputValue = input.value.trim();
-
     if (inputValue !== "") {
         var newItem = createNewItem(inputValue);
         var listContainer = document.getElementById("todolist");
@@ -16,7 +15,6 @@ function addItem() {
 function createNewItem(text) {
     let newItem = document.createElement("li");
     newItem.appendChild(document.createTextNode(text));
-    newItem.appendChild(createCheckButton());
     newItem.appendChild(createDeleteButton());
     newItem.addEventListener("click", toggleChecked);
     return newItem;
@@ -32,17 +30,19 @@ function createDeleteButton() {
     return deleteButton;
 }
 
-function createCheckButton() {
-    let checkButton = document.createElement("button");
-    checkButton.textContent = "✔️";
-
-    return checkButton;
-}
-
 function toggleChecked() {
     this.classList.toggle("check");
-
+    let checkIcon = this.querySelector(".check");
+    if (!checkIcon) {
+        checkIcon = document.createElement("span");
+        checkIcon.textContent = "✅";
+        checkIcon.classList.add("check");
+        this.appendChild(checkIcon);
+    } else {
+        checkIcon.remove();
+    }
 }
+
 
 function displayError(errorMessage) {
     var errorElement = document.getElementById("error");

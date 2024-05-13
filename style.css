@@ -59,17 +59,10 @@ body{
 }
 
 .check {
-    background-color: #172117;
+    background-color: #171a17;
     transition: 0.5s;
     color: white;
 }
-
-.checklist{
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 
 
 .delete {
