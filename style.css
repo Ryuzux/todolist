@@ -59,15 +59,14 @@ body{
 }
 
 .check {
-    background-color: #171a17;
+    background:linear-gradient(rgb(16, 15, 15), rgb(69, 22, 136));
     transition: 0.5s;
     color: white;
 }
 
-
 .delete {
     margin-right: 20px;
-    margin-top: 10px;
+
     border: none;
     background: none;
     cursor: pointer;
