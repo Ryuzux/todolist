@@ -44,12 +44,3 @@ function toggleChecked() {
 }
 
 
-function displayError(errorMessage) {
-    var errorElement = document.getElementById("error");
-    errorElement.textContent = errorMessage;
-}
-
-function clearError() {
-    var errorElement = document.getElementById("error");
-    errorElement.textContent = "";
-}
