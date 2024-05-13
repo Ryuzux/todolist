@@ -14,15 +14,16 @@ function addItem() {
 }
 
 function createNewItem(text) {
-    var newItem = document.createElement("li");
-    newItem.appendChild(createDeleteButton());
+    let newItem = document.createElement("li");
     newItem.appendChild(document.createTextNode(text));
+    newItem.appendChild(createCheckButton());
+    newItem.appendChild(createDeleteButton());
     newItem.addEventListener("click", toggleChecked);
     return newItem;
 }
 
 function createDeleteButton() {
-    var deleteButton = document.createElement("button");
+    let deleteButton = document.createElement("button");
     deleteButton.textContent = "🗑️";
     deleteButton.classList.add("delete");
     deleteButton.onclick = function() {
@@ -31,8 +32,16 @@ function createDeleteButton() {
     return deleteButton;
 }
 
+function createCheckButton() {
+    let checkButton = document.createElement("button");
+    checkButton.textContent = "✔️";
+
+    return checkButton;
+}
+
 function toggleChecked() {
     this.classList.toggle("check");
+
 }
 
 function displayError(errorMessage) {
