@@ -64,9 +64,13 @@ body{
     color: white;
 }
 
-.delete {
-    margin-right: 20px;
+.fas{
+    margin-right: 50px; 
+}
 
+.delete {
+    margin-right: 25px;
+    margin-top: 6px;
     border: none;
     background: none;
     cursor: pointer;
@@ -74,10 +78,24 @@ body{
     right: 0;
 }
 
-
 .delete:hover{
     background-color: #540f0d;
     transition: 0.2s;
+}
+
+.edit{
+    margin-right: 50px;
+    margin-top: 6px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.edit:hover{
+    background-color: #540f0d;
+    transition:0.2s;
 }
 
 @media (max-width: 600px) {
